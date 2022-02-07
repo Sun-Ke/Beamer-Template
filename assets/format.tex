@@ -1,0 +1,99 @@
+\documentclass{ctexbeamer}
+%\tiny\scriptsize\footnotesize\small\normalsize\large\Large\LARGE \huge\Huge
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+\usecolortheme{crane}
+\setbeamertemplate{frame numbering}[fraction]		% 当前页/总页数
+%\setbeamertemplate{headline}{}						% 不显示最上的导航栏
+%\setbeamertemplate{navigation symbols}{}			% 不显示右下的导航图标
+\setbeamercovered{transparent=15}					% pause 透明度
+
+\setbeamerfont{footnote mark}{size=\scriptsize}		% 脚注符号大小
+\setbeamerfont{footnote}{size=\footnotesize}		% 脚注大小
+
+\newcommand{\Sub}{$>>>$}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,patterns,plotmarks,shapes,snakes,er,3d,automata,backgrounds,topaths,trees,petri,mindmap}
+
+\XeTeXlinebreaklocale "zh"							% 表示用中文的断行
+\XeTeXlinebreakskip = 0pt plus 1pt					% 多一点调整的空间
+
+
+\usefonttheme[onlylarge]{structuresmallcapsserif}
+\usefonttheme[onlysmall]{structurebold}
+\setbeamerfont{title}{shape=\itshape,family=\rmfamily}
+%\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
+
+\def\hilite<#1>{%
+\temporal<#1>{\color{gray}}{\color{blue}}%
+{\color{blue!45}}}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\raggedright
+
+\usepackage{pstricks,pst-tree,pst-node,pst-text}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{listings}
+
+\definecolor{commentcolor}{RGB}{85,139,78}
+\definecolor{stringcolor}{RGB}{206,145,108}
+\definecolor{keywordcolor}{RGB}{34,34,250}
+\definecolor{backcolor}{RGB}{220,220,220}
+
+
+% 代码环境
+\lstset{
+%backgroundcolor = \color{gray!10},
+numbers=left, 									% 左侧行号，删除本行则无行号
+numbersep=8pt,                   				% 行号与代码的间距
+%flexiblecolumns=true,             				% 加上后tabsize不准确
+numberstyle=\scriptsize, 	
+stepnumber=1,                   				% 行号出现的间隔数，是1的话每行都标注行号
+basicstyle=\linespread{1}\small\ttfamily, 		% 代码基本设置，行间距，字体大小
+commentstyle=\color{commentcolor},  			% 注释
+keywordstyle=\bfseries\color{keywordcolor},  	% 关键词加粗
+stringstyle=\color{red},    					% 字符串
+%escapeinside=&&,								% 逃逸字符，基本不用
+extendedchars=true,           					% lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+frame=shadowbox, % trBL, 
+rulesepcolor= \color{red!20!green!20!blue!20},	% 阴影浅灰色
+%xleftmargin=2em,								
+%xrightmargin=2em,
+%aboveskip=1em,
+tabsize=4,										% tab的空格数
+breaklines=true,  							 	% 自动换行，建议不要写太长的行
+%title=\lstname	% show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+%\setmonofont{Courier New}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block body alerted}{bg=alerted text.fg!10}
+\setbeamercolor{block title alerted}{bg=alerted text.fg!20, fg=red}
+\setbeamercolor{block body}{bg=structure!10}
+\setbeamercolor{block title}{bg=structure!20, fg=red}
+\setbeamercolor{block body example}{bg=green!10}
+\setbeamercolor{block title example}{bg=green!20}
+
+\usepackage{colortbl}
+
+%修改比例16:9
+\usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.36,debug]{beamerposter}
+
+%伪代码设置
+\usepackage[lined]{algorithm} 
+\usepackage{amsthm}
+\usepackage[noend]{algpseudocode}
+
+\algnewcommand{\algorithmicand}{\textbf{ and }}
+\algnewcommand{\algorithmicor}{\textbf{ or }}
+\algnewcommand{\Or}{\algorithmicor}
+\algnewcommand{\AND}{\algorithmicand}
+\algnewcommand{\Break}{\textbf{break} }
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
