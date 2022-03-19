@@ -191,4 +191,57 @@ $$A(x)=\sum_{k=0}^{n-1}y_k\frac{\prod_{j\ne k}(x-x_j)}{\prod_{j\ne k}(x_k-x_j)}$
 
 \end{frame}
 
+
+\begin{frame}{\LARGE Table}
+  \begin{block}
+  {
+  \centering
+  \begin{tabularx}{\dimexpr\textwidth-2\tabcolsep}{@{}p{0.2\textwidth}@{}p{0.2\textwidth}@{}p{0.2\textwidth}@{}p{0.133\textwidth}@{}p{0.133\textwidth}@{}p{0.133\textwidth}}
+  Algorithm & Time (worst) &    Time (avg.) &  Space &  Stable &  In-place 
+  \end{tabularx}
+  }%
+  \centering
+    \begin{tabularx}{\dimexpr\textwidth-2\tabcolsep}{@{}p{0.2\textwidth}@{}p{0.2\textwidth}@{}p{0.2\textwidth}@{}p{0.133\textwidth}@{}p{0.133\textwidth}@{}p{0.133\textwidth}}
+    
+      insertion sort 	&  $\Theta(n^2)$   	& $\Theta(n^2)$		 & $O(1)$	 & yes 		 & yes  \\
+      merge sort     & $\Theta(n\log{n})$ & $\Theta(n\log{n})$ & $O(N)$                       & yes    & no       \\
+      heapsort         &   $O(n\log{n})$    &      $O(n\log{n})$ & $O(1)$                       & no     & yes      \\
+      quick sort     &   $\Theta(n^2)$    & $\Theta(n\log{n})$ & $O(N)$  $O(\log{N})$ & no     & yes      \\
+      counting sort  &   $\Theta(k+n)$    &      $\Theta(k+n)$ & $O(k)$                       & yes    & no       \\
+      radix sort     &  $\Theta(d(k+n))$  &   $\Theta(d(k+n))$ & $O(k+n)$                     & -      & no      \\
+      bucket sort      &   $\Theta(n^2)$    &        $\Theta(n)$ & $O(n) $                      & yes    & no      
+    \end{tabularx}%
+  \end{block}%
+\end{frame}
+
+\begin{frame}{\LARGE Other Tables}
+
+%\resizebox{10cm}{!}
+%{
+\begin{tabular}{ccccccc}
+\hline
+    i & 0 & 1 & 2 & 3 & 4 & 5\\
+\hline
+    s & \$ & \# & a & \# & a & \# \\
+\hline
+\end{tabular}
+%}
+
+\begin{table}
+\caption{A realistic table I have built}
+\label{tab:table}
+\begin{tabular}{|c||ccc|}
+\hline \hline
+    Small col & \multicolumn{3}{|c|}{Big col} \\
+\hline
+    Grouped items & \multicolumn{3}{|c|}{Item 1} \\
+\cline{2-4}
+    & \multicolumn{3}{|c|}{Item 2} \\
+\hline
+    Usual row & Spam & Bacon & Eggs \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+\end{frame}
 \end{document}
