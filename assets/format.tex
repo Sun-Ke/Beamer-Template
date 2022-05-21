@@ -2,15 +2,20 @@
 %\tiny\scriptsize\footnotesize\small\normalsize\large\Large\LARGE \huge\Huge
 \useoutertheme{metropolis}
 \useinnertheme{metropolis}
-\usefonttheme{metropolis}
+%\usefonttheme{metropolis}
 \usecolortheme{crane}
 \setbeamertemplate{frame numbering}[fraction]		% 当前页/总页数
 %\setbeamertemplate{headline}{}						% 不显示最上的导航栏
 %\setbeamertemplate{navigation symbols}{}			% 不显示右下的导航图标
 \setbeamercovered{transparent=15}					% pause 透明度
 
+%\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+
 \setbeamerfont{footnote mark}{size=\scriptsize}		% 脚注符号大小
 \setbeamerfont{footnote}{size=\footnotesize}		% 脚注大小
+\setbeamerfont{title}{shape=\itshape,family=\rmfamily}
+\setbeamerfont{frametitle}{size=\LARGE}
 
 \newcommand{\Sub}{$>>>$}
 
@@ -23,7 +28,6 @@
 
 \usefonttheme[onlylarge]{structuresmallcapsserif}
 \usefonttheme[onlysmall]{structurebold}
-\setbeamerfont{title}{shape=\itshape,family=\rmfamily}
 %\setbeamercolor{title}{fg=red!80!black,bg=red!20!white}
 
 \def\hilite<#1>{%
@@ -68,8 +72,6 @@ breaklines=true,  							 	% 自动换行，建议不要写太长的行
 %title=\lstname	% show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
-\usefonttheme{professionalfonts} % using non standard fonts for beamer
-\usefonttheme{serif} % default family is serif
 %\setmonofont{Courier New}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
